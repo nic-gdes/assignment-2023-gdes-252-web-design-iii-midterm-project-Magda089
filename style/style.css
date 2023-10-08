@@ -64,16 +64,19 @@ main {
 }
 
 .button {
-    display: inline-block;
+    /* display: inline-block; */
+    display: flex;
+    justify-content: center;
     padding: 0.5rem 1rem;
     background-color: #98002E;
     color: #fff;
     text-decoration: none;
     border-radius: 20px;
-    margin-top: 1.5remp;
+    /* margin-top: 1.5remp; */
     font-size: 14px;
-    width: 80%;
+    width: 100%;
     text-align: center;
+    margin: auto;
     
 
 }
@@ -108,6 +111,7 @@ footer {
 }
 
 
+
 .footer-description {
     margin-bottom: 1rem ;
 }
@@ -125,7 +129,7 @@ h3 {
 }
 
 .footer-logo {
-    max-width: 100%;
+    max-width: 50%;
     margin: 1rem auto;
 }
 
@@ -142,4 +146,85 @@ h3 {
 .footer section{
 padding: 1rem;
 margin-bottom: 1.5rem
+}
+
+
+/* Media query for tablet */
+@media (min-width: 768px) {
+    nav img {
+        max-width: 80%;
+    }
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .article img {
+        max-width: 100%;
+    }
+
+    .article {
+        padding: 1rem;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    body {
+        font-size: 16px;
+    }
+.footer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+    align-items: center;
+            }   
+    .button {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+       width: 50%;
+    }
+}
+  
+
+/* Media query for desktop */
+@media (min-width: 1024px) {
+    nav img {
+        max-width: 100%;
+    }
+    nav ul {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .article img {
+        max-width: 100%;
+    }
+    .article {
+        padding: 2rem;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    body {
+        font-size: 18px;
+    }
+    .footer {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 20px;
+        align-items: center;
+        
+    }
+    .button {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+       width: 50%;
+    }
 }
