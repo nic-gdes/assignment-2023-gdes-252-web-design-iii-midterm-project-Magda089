@@ -76,6 +76,7 @@ justify-content: space-between;
     height: auto;
     padding-bottom: 2rem;
 }
+
 .article-bottom {
     /* background-color: #F4E2D6 ; */
     padding: 1rem;
@@ -229,6 +230,7 @@ header {
     gap:1rem; */
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto;
+    gap: 1rem;
     }
 
 .article {
@@ -260,7 +262,7 @@ header {
 
 /* Media query for desktop */
 @media (min-width: 1024px) {
-
+  
     body {
         font-size: 18px;
     }
@@ -307,6 +309,7 @@ header {
     .main {
         grid-template-columns: repeat(3, 1fr); /* Three equal columns */
         grid-template-rows: auto auto; /* Three rows with auto height */
+        gap: 1rem;
     }
 
     .item-1 {
