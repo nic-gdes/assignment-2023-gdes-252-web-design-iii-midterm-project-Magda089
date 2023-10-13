@@ -1,6 +1,7 @@
-body, h1, h2, h3, ul,p {
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -8,18 +9,18 @@ body {
     /* background-color: #ba5c1c; */
     width: 100%;
     height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #F7F1ED ;
 }
 
-html {
-    font-size: 16px;
-}
 
 
 header {
 display: flex;
-flex-direction: column;
-align-items: center;
-text-align: center;
+/* flex-direction: column; */
+/* align-items: center; */
+/* text-align: center; */
 justify-content: space-between;
 padding: 10px;
 }
@@ -27,25 +28,35 @@ padding: 10px;
  .latest-news {
     padding-bottom: 1rem;
     font-weight: 100;
+    padding: 1rem 0;
+    font-size: 32px;
  }
 
 nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 1rem;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 nav img {
     max-width: 50%;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
-nav ul {
+
+.menu {
 list-style: none;
+display: flex;
 margin-top: 10px;
 margin-bottom: 40px;
 justify-content: space-between;
+}
+.menu-item {
+    margin: 0 8px;
+    font-size: 14px;
+    
 }
 
 .computer-icon {
@@ -62,17 +73,14 @@ justify-content: space-between;
 }
 
 .article {
-    /* display: grid;
-    grid-template-columns: 1fr; */
     gap: 1rem;
-    /* padding: 1rem; */
     margin-bottom: 1rem;
 }
 
 
 .article img {
-    width: 100%;
-    max-width: 100%;
+    min-width: 100%;
+    /* max-width: 100%; */
     height: auto;
     padding-bottom: 2rem;
 }
@@ -101,11 +109,11 @@ justify-content: space-between;
     position: relative;
     max-width: 100%;
     text-align: center;
-    align-items: center;
+    /* align-items: center; */
   }
   
   .line:after {
-    position: absolute;
+    /* position: absolute;
     bottom: -270px;
     width: 100%;
     height: 3px;
@@ -113,14 +121,24 @@ justify-content: space-between;
     content: "";
     display: block;
     left: 50%;
-    transform: translatex(-50%);
+    transform: translatex(-50%); */
+
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transition: translateX(-50%);
+    -ms-text-kashida-space: 100%;
+    height: 3px;
+    background: #98002E;
+
   }
 
 .button {
     display: flex;
     flex-direction: column;
     width: 100%;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     margin-top: 3rem;
     margin-bottom: 3rem;
@@ -181,190 +199,96 @@ h3 {
     margin: 1rem auto;
 }
 
+/* ************************************************** */
+/* ************************************************** */
+/* ************************************************** */
+/* Media query for TABLET */
 
-
-
-/* Media query for tablet */
+/* Media query for TABLET */
 @media (min-width: 768px) {
-   
-header {
-    display: grid;
-    grid-template-columns: 1fr auto;
+  header {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    
-}
- nav {
-    order: 1;
-  
-}
-.computer-icon {
-    display: inline;
-    order: 2;
-    max-height: 600px;
-    align-self: center;
-}
+    padding: 10px;
+  }
 
-.computer-icon img {
-  max-width: 50%;
-  height: auto;
-}
-  
-    nav img {
-        max-height: 50px;
-    }
-    nav ul {
-      text-align: left;
-    }
-    
- 
-    .article-2 {
-    grid-column: 1 / span 3;
-    grid-row: auto;
-    width: 100%;
-    }
-    
-    .grid-container {
+  .latest-news {
+    font-weight: 100;
+    padding: 1rem 0;
+  }
+
+  .menu-item {
+    margin: 0 10px;
+    font-size: 14px;
+  }
+
+  nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    padding-left: 20px;
+  }
+
+  .computer-icon {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .computer-icon img {
+    max-width: 50%;
+    height: auto;
+  }
+
+  .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Three equal columns */
-    grid-template-rows: repeat(2, 1fr); /* Two equal rows */
-    gap:1rem; 
-    
-    }
+    /* grid-template-rows: auto auto; */
+    grid-gap: 1rem;
+  }
 
-.article {
-    width: 100%;
-}
- .item-1 {
+  .item-1 {
     grid-column: 1;
     grid-row: 1;
- }  
- .item-2 {
-    grid-column:2/ span 3;
+  }
+
+  .item-2 {
+    grid-column: 2 / span 3;
     grid-row: 1;
- }
- .item-3 {
+  }
+
+  .item-3 {
     grid-column: 1;
     grid-row: 2;
- }
+  }
 
- .item-4 {
-    grid-column: 2;
+  .item-4 {
+    grid-column: 4;
     grid-row: 2;
-} 
+  }
 
-.item-5 {
-    grid-column: 3; 
+  .item-5 {
+    grid-column: 5;
     grid-row: 2;
+  }
+
+   img {
+    max-width: 100%;
+    height: auto; 
+    object-fit: cover;
+  }
+
+.item-2 img {
+
 }
 
-.article-2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* max-width: 800px; */
-    margin: 0 auto;
 }
-}
-
 
 /* ********************************************************* */
 /* Media query for desktop */
 @media (min-width: 1024px) {
   
 
-    body {
-        font-size: 18px;
-    }
-    .footer {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-gap: 20px;
-        align-items: center;
-        
-    }
-
-   
-    header {
-        display: grid;
-        grid-template-columns: 1fr auto;
-        align-items: center;
-    }
-
-    nav {
-        order: 1;
-    }
-
-    .computer-icon {
-        display: inline;
-        order: 2;
-        max-height: 600px;
-        align-self: center;
-    }
-
-    .computer-icon img {
-        max-width: 50%;
-        height: auto;
-    }
-
-    nav img {
-        max-height: 50px;
-    }
-
-    nav ul {
-        text-align: left;
-    }
-
-
-    .grid-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr); /* Three equal columns */
-        grid-template-rows: auto ; 
-        gap: 1rem;
-
-    }
-
-    .item-1 {
-        grid-column: 1;
-        grid-row: 1;
-    }
-
-    .item-2 {
-        grid-column: 2 ; /* Span columns 2 and 3 */
-        grid-row: 1;
-    }
-
-    .item-3 {
-        grid-column: 3;
-        grid-row: 1 ;
-        margin-left: 5rem;
-    }
-
-    /* .item-4 {
-        grid-column: 2 /span 3; 
-        grid-row: 2;  
-        display: grid; 
-        background-color: #98002E;
-        /* grid-template-columns: repeat(2, 1fr);  */
-        /* grid-template-rows: auto;   */
-        /* margin: auto; */
-        /* color: #ffffff; */
-        /* padding: 1rem; */
-    
-       
-    /* } */
-
-
-
-
-    .item-5 {
-        grid-column: 1;
-        grid-row: 2;
-    }
-
-    .article-2 {
-        grid-column: 2;
-        grid-row: 3;
-    }
 
     .button {
         display: flex;
