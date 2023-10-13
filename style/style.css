@@ -278,8 +278,32 @@ h3 {
     object-fit: cover;
   }
 
+  .button {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 50%;
+    padding: 10px 20px;
+    /* background-color: #98002E; */
+    color: #FFFFFF;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    align-self: center;
+    text-align: center;
+}
 
-
+.article-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container {
+  max-width: 768px; /* Adjust the maximum width as needed */
+  padding: 20px;
+  text-align: center; /* Center the content horizontally */
+}
 }
 
 /* ********************************************************* */
